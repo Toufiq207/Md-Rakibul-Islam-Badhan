@@ -1,8 +1,12 @@
 import React from 'react'
+import Home from './page/Home'
 
 const App = () => {
   return (
-    <div className='bg-amber-500'>Md Rakibul Islam Badhan</div>
+    <div >
+
+     <Home/> 
+    </div>
   )
 }
 

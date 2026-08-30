@@ -4,7 +4,7 @@ import Image from "./Image";
 import bannerData from "../data/bannerData";
 
 import Facebook from '../assets/icon/facebook.png'
-import Tiktok from '../assets/icon/tiktok.png'
+
 import Linkdin from '../assets/icon/linkedin.jpg'
 
 import Instagram from '../assets/icon/instagram.png'
@@ -56,10 +56,7 @@ const Hero = () => {
           />
          </a>
 
-          <Image
-            className='w-[50px] sm:w-[60px] lg:w-[70px]'
-            src={Tiktok}
-          />
+        
 
           <a href="" target='blank'>
             <Image

@@ -6,7 +6,7 @@ import Contact from '../layout/Contact'
 import Project from '../layout/Project'
 import Skills from '../layout/Skills'
 import Exprierence from '../layout/Exprierence'
-
+import Faq from '../layout/Faq'
 const Home = () => {
   return (
     <div>
@@ -15,6 +15,7 @@ const Home = () => {
         <Skills/>
         <Exprierence/>
         <Service/>
+        <Faq/>
       <Project/>
         <Contact/>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../component/Container";
 import Heading from "../component/Heading";
 import Image from "../component/Image";
-import Badhon from "../assets/logo/rakibilislam badhon.png";
+// import Badhon from "../assets/logo/rakibilislam badhon.png";
 import { motion } from "framer-motion";
 const About = () => {
   return (
@@ -29,7 +29,7 @@ const About = () => {
       >
         <div className="aspect-square w-[70%] overflow-hidden rounded-full sm:w-[60%] md:w-[75%]">
           <Image
-            src={Badhon}
+            src="https://res.cloudinary.com/wz91plhd/image/upload/f_auto,q_auto/rakibilislam_badhon"
             className="h-full w-full object-cover"
           />
         </div>

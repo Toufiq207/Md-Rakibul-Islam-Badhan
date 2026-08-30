@@ -10,17 +10,12 @@ const About = () => {
 <Container>
 
     {/* Heading */}
-    <motion.div
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
+  
       <Heading
         className="mb-8 text-center md:mb-10"
         text="About"
       />
-    </motion.div>
+    
 
     <div className="flex flex-col gap-8 md:flex-row md:gap-0">
 

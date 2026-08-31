@@ -1,38 +1,87 @@
 import React from "react";
 import Container from "../component/Container";
 import projectsData from "../data/projectsData";
-
+import { motion } from "framer-motion";
+import Heading from "../component/Heading";
 
 const Project = () => {
   return (
-    <section className="py-20 font-pop">
-      <Container >
+    <section id="project" className="py-20 font-pop">
+      <Container>
 
         {/* Section Heading */}
-        <div className="text-center mb-14">
-          <p className="text-sm font-medium uppercase tracking-[3px] text-blue-600 mb-3">
+        <div
+         
+          className="mb-14 text-center"
+        >
+          <p className="mb-3 text-sm font-medium uppercase tracking-[3px] text-blue-600">
             My Work
           </p>
+        
+          <Heading text='  Projects & Case Studies'/>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-            Projects & Case Studies
-          </h2>
+        
+        
 
-          <p className="max-w-2xl mx-auto mt-5 text-gray-600 leading-7">
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-gray-600">
             Here are some of my selected projects, showing the problem,
             solution and approach behind each project.
           </p>
         </div>
 
+
         {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project) => (
-            <div
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+
+          {projectsData.map((project, index) => (
+            <motion.div
               key={project.id}
-              className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300"
+
+              initial={{
+                opacity: 0,
+                y: 60,
+                scale: 0.95,
+              }}
+
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+              }}
+
+              className="
+                group
+                rounded-2xl
+                border
+                border-gray-200
+                bg-white
+                p-7
+                shadow-sm
+                transition-shadow
+                duration-300
+                hover:shadow-xl
+              "
             >
+
               {/* Project Number */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="mb-6 flex items-center justify-between">
+
                 <span className="text-sm font-semibold text-blue-600">
                   PROJECT {String(project.id).padStart(2, "0")}
                 </span>
@@ -40,47 +89,68 @@ const Project = () => {
                 <span className="rounded-full bg-blue-50 px-4 py-1.5 text-xs font-medium text-blue-600">
                   {project.service}
                 </span>
+
               </div>
 
+
               {/* Title */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors">
+              <h3 className="
+                mb-6
+                text-2xl
+                font-bold
+                text-gray-900
+                transition-colors
+                duration-300
+                group-hover:text-blue-600
+              ">
                 {project.title}
               </h3>
 
+
               {/* Problem */}
               <div className="mb-5">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+
+                <h4 className="mb-2 text-lg font-semibold text-gray-900">
                   Problem
                 </h4>
 
-                <p className="text-gray-600 leading-7">
+                <p className="leading-7 text-gray-600">
                   {project.problem}
                 </p>
+
               </div>
+
 
               {/* Solution */}
               <div className="mb-5">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+
+                <h4 className="mb-2 text-lg font-semibold text-gray-900">
                   Solution
                 </h4>
 
-                <p className="text-gray-600 leading-7">
+                <p className="leading-7 text-gray-600">
                   {project.solution}
                 </p>
+
               </div>
+
 
               {/* Result */}
               <div className="rounded-xl bg-gray-50 p-5">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+
+                <h4 className="mb-2 text-lg font-semibold text-gray-900">
                   Result
                 </h4>
 
-                <p className="text-gray-600 leading-7">
+                <p className="leading-7 text-gray-600">
                   {project.result}
                 </p>
+
               </div>
-            </div>
+
+            </motion.div>
           ))}
+
         </div>
 
       </Container>

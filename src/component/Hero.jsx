@@ -184,7 +184,6 @@ const Hero = () => {
 
         </div>
 {/* ================= Hero Intro ================= */}
-```jsx
 {/* ================= Hero Intro ================= */}
 <div className="mb-6 pt-4 text-center font-pop sm:mb-8 lg:mb-10">
 
@@ -300,7 +299,7 @@ const Hero = () => {
 
     {/* Hire Me */}
     <a
-      href="#contact"
+      
       className="
         w-full
         rounded-lg
@@ -311,6 +310,7 @@ const Hero = () => {
         font-semibold
         text-white
         hover:text-gray-900
+        
         shadow-md
         transition-all
         duration-300
@@ -326,23 +326,23 @@ const Hero = () => {
 
     {/* View My Work */}
     <a
-      href="#project"
+     
       className="
         w-full
         rounded-lg
-        border
-        border-gray-900
-        bg-white
+        bg-gray-900
         px-6
         py-3
         text-sm
         font-semibold
-        text-gray-900
+        text-white
+        hover:text-gray-900
+        
+        shadow-md
         transition-all
         duration-300
         hover:-translate-y-1
-        hover:bg-gray-900
-        hover:text-white
+        hover:bg-white
         hover:shadow-lg
         sm:w-auto
       "
@@ -353,23 +353,23 @@ const Hero = () => {
 
     {/* Contact Me */}
     <a
-      href="#contact"
       className="
         w-full
         rounded-lg
-        border
-        border-gray-300
-        bg-gray-100
+        bg-gray-900
         px-6
         py-3
         text-sm
         font-semibold
-        text-gray-800
+        text-white
+        hover:text-gray-900
+        
+        shadow-md
         transition-all
         duration-300
         hover:-translate-y-1
-        hover:bg-gray-200
-        hover:shadow-md
+        hover:bg-white
+        hover:shadow-lg
         sm:w-auto
       "
     >

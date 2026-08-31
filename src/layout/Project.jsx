@@ -6,7 +6,7 @@ import Heading from "../component/Heading";
 
 const Project = () => {
   return (
-    <section id="project" className="py-20 font-pop">
+    <section id="projects" className="py-20 font-pop">
       <Container>
 
         {/* Section Heading */}

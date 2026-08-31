@@ -6,7 +6,7 @@ import skillCategoriesData from "../data/skillCategoriesData";
 
 const Skill = () => {
   return (
-    <section className="py-20 font-pop overflow-hidden">
+    <section id="skills" className="py-20 font-pop overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">

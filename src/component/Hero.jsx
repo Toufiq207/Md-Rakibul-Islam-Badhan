@@ -30,7 +30,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className="w-full overflow-hidden py-5 sm:py-7 lg:py-10">
+    <div id="home" className="w-full overflow-hidden py-5 sm:py-7 lg:py-10 pt-5">
       <Container>
 
         

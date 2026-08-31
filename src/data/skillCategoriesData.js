@@ -1,4 +1,4 @@
-  const skillCategories = [
+  const skillCategoriesData = [
     {
       title: "Digital Marketing",
       skills: [
@@ -58,4 +58,4 @@
     },
   ];
 
-export default skillCategories ;
+export default skillCategoriesData ;

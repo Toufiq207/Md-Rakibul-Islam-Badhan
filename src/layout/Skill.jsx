@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../component/Heading";
-import skillCategories from "../data/skillCategories";
+import skillCategories from "../data/skillCategoriesData";
 import { motion } from "framer-motion";
 
 const Skill = () => {

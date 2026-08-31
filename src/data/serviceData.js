@@ -1,114 +1,119 @@
 import {
-  FaIndustry,
-  FaCogs,
-  FaChartLine,
-  FaCheckCircle,
-  FaClipboardList,
-  FaLightbulb,
+FaSearch,
+FaBullhorn,
+FaChartLine,
+FaUsers,
+FaLightbulb,
+FaGraduationCap,
 } from "react-icons/fa";
 
 const serviceData = [
-  {
-    id: 1,
-    title: "Production Management",
-    description:
-      "Efficient production planning, monitoring, and management to ensure smooth operations and maximum productivity.",
-    details:
-      "Professional production management focuses on planning, organizing, monitoring, and controlling production activities. The goal is to achieve production targets efficiently while maintaining quality, reducing downtime, controlling costs, and increasing overall productivity.",
-    features: [
-      "Production planning and monitoring",
-      "Manpower and resource management",
-      "Production target achievement",
-      "Downtime reduction",
-      "Productivity improvement",
-    ],
-    icon: FaIndustry,
-  },
+{
+id: 1,
+title: "SEO Services",
+description:
+"Professional SEO services to improve search rankings, website visibility, and organic traffic.",
+details:
+"I provide complete SEO solutions to help businesses improve their online visibility and achieve better search engine rankings. From keyword research to technical optimization, I focus on building a strong and sustainable SEO strategy.",
+features: [
+"Complete SEO Audit",
+"Keyword Research",
+"On-Page SEO",
+"Technical SEO",
+"Local SEO",
+"Off-Page SEO",
+"Competitor Analysis",
+],
+icon: FaSearch,
+},
 
-  {
-    id: 2,
-    title: "Industrial Engineering",
-    description:
-      "Improving production processes, workflow, efficiency, and overall operational performance.",
-    details:
-      "Industrial Engineering focuses on analyzing and improving production systems. It helps organizations optimize manpower, machines, workflow, production methods, and resources to achieve better efficiency and productivity.",
-    features: [
-      "Work study and method study",
-      "Line balancing",
-      "Manpower optimization",
-      "Process improvement",
-      "Productivity analysis",
-    ],
-    icon: FaCogs,
-  },
+{
+id: 2,
+title: "Social Media Marketing",
+description:
+"Strategic social media marketing to grow your brand, audience, engagement, and online presence.",
+details:
+"I help businesses build and manage a strong social media presence through strategic planning, content marketing, audience engagement, and platform-specific marketing strategies.",
+features: [
+"Facebook Page Management",
+"Instagram Marketing",
+"TikTok Marketing",
+"LinkedIn Marketing",
+"Social Media Strategy",
+"Content Strategy",
+],
+icon: FaBullhorn,
+},
 
-  {
-    id: 3,
-    title: "LEAN Manufacturing",
-    description:
-      "Implementing LEAN manufacturing principles to reduce waste, improve quality, and increase productivity.",
-    details:
-      "LEAN Manufacturing focuses on eliminating unnecessary activities and reducing waste throughout the production process. It creates a more efficient workflow while improving quality, productivity, and customer value.",
-    features: [
-      "Waste reduction",
-      "Process optimization",
-      "5S implementation",
-      "Kaizen and continuous improvement",
-      "Efficiency improvement",
-    ],
-    icon: FaChartLine,
-  },
+{
+id: 3,
+title: "Paid Advertising",
+description:
+"Targeted advertising campaigns designed to generate leads, increase conversions, and grow your business.",
+details:
+"I create and manage data-driven paid advertising campaigns focused on reaching the right audience, generating quality leads, improving conversions, and maximizing advertising performance.",
+features: [
+"Facebook Ads",
+"Instagram Ads",
+"Google Ads",
+"Lead Generation Campaign",
+"Conversion Campaign",
+"Retargeting",
+"Pixel & Tracking Setup",
+"A/B Testing",
+],
+icon: FaChartLine,
+},
 
-  {
-    id: 4,
-    title: "Quality Assurance",
-    description:
-      "Maintaining quality standards through effective quality control, monitoring, and continuous improvement.",
-    details:
-      "Quality Assurance ensures that products and processes consistently meet required quality standards. It involves systematic monitoring, quality control, root cause analysis, and preventive actions.",
-    features: [
-      "Quality monitoring",
-      "Root Cause Analysis",
-      "Defect reduction",
-      "Quality control systems",
-      "Corrective and preventive actions",
-    ],
-    icon: FaCheckCircle,
-  },
+{
+id: 4,
+title: "Lead Generation",
+description:
+"Effective lead generation strategies to help businesses find and connect with potential customers.",
+details:
+"I develop targeted lead generation strategies to help businesses attract potential customers and generate high-quality leads through social media, landing pages, email marketing, and B2B outreach.",
+features: [
+"Facebook Lead Generation",
+"Landing Page Strategy",
+"Email Lead Generation",
+"B2B Lead Generation",
+],
+icon: FaUsers,
+},
 
-  {
-    id: 5,
-    title: "Production Planning",
-    description:
-      "Strategic production planning to optimize resources, meet deadlines, and achieve production targets.",
-    details:
-      "Production Planning involves preparing production schedules, allocating resources, balancing capacity, monitoring progress, and ensuring that production targets are achieved within the required timeline.",
-    features: [
-      "Production scheduling",
-      "Capacity planning",
-      "Resource allocation",
-      "Target monitoring",
-      "On-time delivery planning",
-    ],
-    icon: FaClipboardList,
-  },
+{
+id: 5,
+title: "Digital Marketing Consultation",
+description:
+"Professional marketing consultation to create effective strategies for business growth and online success.",
+details:
+"I provide practical digital marketing consultation to help businesses understand their audience, choose the right marketing channels, improve their online presence, and build effective growth strategies.",
+features: [
+"Marketing Strategy",
+"Business Growth Strategy",
+"Social Media Strategy",
+"SEO Strategy",
+"Paid Ads Strategy",
+],
+icon: FaLightbulb,
+},
 
-  {
-    id: 6,
-    title: "Continuous Improvement",
-    description:
-      "Identifying operational problems and implementing practical solutions for continuous business improvement.",
-    details:
-      "Continuous Improvement focuses on identifying operational problems, analyzing their root causes, and implementing practical solutions. The objective is to continuously improve productivity, quality, efficiency, and business performance.",
-    features: [
-      "Problem identification",
-      "Root Cause Analysis",
-      "Kaizen activities",
-      "Process improvement",
-      "Performance optimization",
-    ],
-    icon: FaLightbulb,
-  },
+{
+id: 6,
+title: "Training & Mentoring",
+description:
+"Professional training and mentoring for individuals interested in digital marketing and freelancing.",
+details:
+"I provide practical guidance and training for individuals who want to develop professional digital marketing skills and build their careers in freelancing and online marketing.",
+features: [
+"Digital Marketing Training",
+"Freelancing Training",
+"SEO Training",
+"Facebook Ads Training",
+"Google Ads Training",
+],
+icon: FaGraduationCap,
+},
 ];
 
 export default serviceData;

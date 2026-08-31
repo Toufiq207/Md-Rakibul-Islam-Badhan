@@ -4,7 +4,7 @@ import About from '../layout/About'
 import Service from '../layout/Service'
 import Contact from '../layout/Contact'
 import Project from '../layout/Project'
-import Skills from '../layout/Skills'
+import Skill from '../layout/Skill'
 import Exprierence from '../layout/Exprierence'
 import Faq from '../layout/Faq'
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
     <div>
         <Hero/>
         <About/>
-        <Skills/>
+        <Skill/>
         <Exprierence/>
         <Service/>
         <Faq/>

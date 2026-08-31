@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../component/Heading";
 import skillCategories from "../data/skillCategoriesData";
 import { motion } from "framer-motion";
+import skillCategoriesData from "../data/skillCategoriesData";
 
 const Skill = () => {
   return (
@@ -23,7 +24,7 @@ const Skill = () => {
 
         {/* Skill Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {skillCategories.map((category, index) => (
+          {skillCategoriesData.map((category, index) => (
             <motion.div
               key={index}
               initial={{

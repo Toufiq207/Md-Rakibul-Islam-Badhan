@@ -22,7 +22,7 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import { motion } from "framer-motion";
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
@@ -32,6 +32,106 @@ const Hero = () => {
   return (
     <div className="w-full overflow-hidden py-5 sm:py-7 lg:py-10">
       <Container>
+
+        
+  
+{/* ================= Hero Intro ================= */}
+<div className="mb-6 text-center font-pop sm:mb-8 lg:mb-10">
+
+  {/* Name - Letter Animation */}
+  <motion.h1
+    initial="hidden"
+    animate="visible"
+    variants={{
+      visible: {
+        transition: {
+          staggerChildren: 0.08,
+        },
+      },
+    }}
+    className="
+      text-2xl
+      font-bold
+      text-gray-900
+      sm:text-3xl
+      md:text-4xl
+      lg:text-5xl
+    "
+  >
+    {"MD RAKIBUL ISLAM BADHAN".split("").map((letter, index) => (
+      <motion.span
+        key={index}
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 30,
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.4,
+              ease: "easeOut",
+            },
+          },
+        }}
+        className="inline-block"
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </motion.span>
+    ))}
+  </motion.h1>
+
+
+  {/* Professional Title - Letter Animation */}
+  <motion.p
+    initial="hidden"
+    animate="visible"
+    variants={{
+      visible: {
+        transition: {
+          delayChildren: 1.8,
+          staggerChildren: 0.04,
+        },
+      },
+    }}
+    className="
+      mt-2
+      text-sm
+      font-medium
+      text-gray-600
+      sm:text-base
+      md:text-lg
+    "
+  >
+    {"Digital Marketing Specialist | Trainer | ICT Professional"
+      .split("")
+      .map((letter, index) => (
+        <motion.span
+          key={index}
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 15,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.3,
+                ease: "easeOut",
+              },
+            },
+          }}
+          className="inline-block"
+        >
+          {letter === " " ? "\u00A0" : letter}
+        </motion.span>
+      ))}
+  </motion.p>
+
+</div>
+
 
         {/* ================= Banner Area ================= */}
         <div className="relative mx-auto w-full px-2 sm:w-[92%] sm:px-0 md:w-[88%] lg:w-[78%]">

@@ -56,6 +56,31 @@ const Contact = () => {
           </div>
         </motion.a>
 
+        {/* Phone */}
+        <motion.a
+        
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-5 flex items-center gap-4 rounded-xl border border-gray-200 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100">
+            <  FaPhoneAlt className="text-2xl text-gray-800" />
+          </div>
+
+          <div>
+            <p className="text-sm font-pop text-gray-500">
+              WhatsApp
+            </p>
+
+            <p className="font-semibold font-pop text-gray-800">
+              +880 1705-263265
+            </p>
+          </div>
+        </motion.a>
+
         {/* Email */}
         <motion.a
           href="mailto:badha@gmail.com"

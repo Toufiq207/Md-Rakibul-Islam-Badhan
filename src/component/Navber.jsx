@@ -53,7 +53,13 @@ const Navber = () => {
               </a>
             ))}
 
-            
+            {/* Hire Me Button */}
+            <a
+              href="#contact"
+              className="px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition duration-300"
+            >
+              Hire Me
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,8 +105,13 @@ const Navber = () => {
               </a>
             ))}
 
-            
-            
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="mt-2 text-center px-5 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium"
+            >
+              Hire Me
+            </a>
           </div>
         </div>
       </Container>

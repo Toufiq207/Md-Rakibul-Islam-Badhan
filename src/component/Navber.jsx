@@ -47,70 +47,84 @@ const Navber = () => {
             ))}
           </ul>
 
-         
+          {/* Contact Button */}
+          <a
+            href="#contact"
+            className="rounded-full bg-red-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-red-600 hover:shadow-lg hover:shadow-red-500/30"
+          >
+            Let's Talk
+          </a>
 
         </Container>
       </div>
 
 
-      {/* ================= MOBILE NAVBAR ================= */}
-      <div className="border-b border-white/10 bg-[#111827] lg:hidden w-full ">
-        
-        {/* Mobile Top Bar */}
-        <div className="flex h-[70px] items-center justify-between px-4">
-          
-          {/* Mobile Logo */}
-          <a href="#home">
-            <h1 className="text-3xl font-bold text-white">
-              RI<span className="text-red-500">B</span>
-            </h1>
-          </a>
+    {/* ================= MOBILE NAVBAR ================= */}
+<div className="fixed left-0 top-0 z-[9999] w-screen border-b border-white/10 bg-[#111827] lg:hidden">
+  
+  {/* Mobile Top Bar */}
+  <Container className="flex h-[70px] items-center justify-between px-4">
+    
+    {/* Mobile Logo */}
+    <a href="#home">
+      <h1 className="text-3xl font-bold text-white">
+        RI<span className="text-red-500">B</span>
+      </h1>
+    </a>
 
-          {/* Menu Button */}
-          <button
-            type="button"
-            onClick={() => setOpen(!open)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition duration-300 hover:bg-red-500"
-          >
-            {open ? <RxCross2 /> : <FaBars />}
-          </button>
+    {/* Menu Button */}
+    <button
+      type="button"
+      onClick={() => setOpen(!open)}
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition duration-300 hover:bg-red-500"
+    >
+      {open ? <RxCross2 /> : <FaBars />}
+    </button>
 
-        </div>
-
-
-        {/* ================= MOBILE DROPDOWN ================= */}
-        <div
-          className={`overflow-hidden border-t border-white/10 transition-all duration-500 ease-in-out ${
-            open ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="px-4 py-5">
-            
-            <ul className="grid grid-cols-2 gap-3">
-              {menuItems.map((item, index) => (
-                <li key={item.name}>
-                  <a
-                    href={item.link}
-                    onClick={() => setOpen(false)}
-                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-gray-200 transition-all duration-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
-                  >
-                    <span>{item.name}</span>
-
-                    <span className="text-xs text-red-500 transition group-hover:text-white">
-                      0{index + 1}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+  </Container>
 
 
-          
+  {/* ================= MOBILE DROPDOWN ================= */}
+  <div
+    className={`absolute left-0 top-[70px] w-full overflow-hidden border-t border-white/10 bg-[#111827] transition-all duration-500 ease-in-out ${
+      open
+        ? "max-h-[700px] opacity-100"
+        : "pointer-events-none max-h-0 opacity-0"
+    }`}
+  >
+    <div className="px-4 py-5">
+      
+      <ul className="grid grid-cols-2 gap-3">
+        {menuItems.map((item, index) => (
+          <li key={item.name}>
+            <a
+              href={item.link}
+              onClick={() => setOpen(false)}
+              className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-gray-200 transition-all duration-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
+            >
+              <span>{item.name}</span>
 
-          </div>
-        </div>
+              <span className="text-xs text-red-500 transition group-hover:text-white">
+                0{index + 1}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
 
-      </div>
+      {/* Mobile Contact Button */}
+      <a
+        href="#contact"
+        onClick={() => setOpen(false)}
+        className="mt-5 flex w-full items-center justify-center rounded-xl bg-red-500 py-4 font-semibold text-white transition duration-300 hover:bg-red-600"
+      >
+        Start a Project →
+      </a>
+
+    </div>
+  </div>
+
+</div>
 
     </nav>
   );

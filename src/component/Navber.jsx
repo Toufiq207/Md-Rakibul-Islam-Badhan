@@ -54,7 +54,7 @@ const Navber = () => {
 
 
       {/* ================= MOBILE NAVBAR ================= */}
-      <div className="border-b border-white/10 bg-[#111827] lg:hidden ">
+      <div className="border-b border-white/10 bg-[#111827] lg:hidden w-full ">
         
         {/* Mobile Top Bar */}
         <div className="flex h-[70px] items-center justify-between px-4">

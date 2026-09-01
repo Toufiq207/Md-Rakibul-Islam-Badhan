@@ -84,7 +84,7 @@ const Navber = () => {
             open ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <Container className="px-4 py-5">
+          <div className="px-4 py-5">
             
             <ul className="grid grid-cols-2 gap-3">
               {menuItems.map((item, index) => (
@@ -107,7 +107,7 @@ const Navber = () => {
 
           
 
-          </Container>
+          </div>
         </div>
 
       </div>

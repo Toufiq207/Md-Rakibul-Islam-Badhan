@@ -417,7 +417,7 @@ const Hero = () => {
 
             {/* View My Work */}
             <a
-              href="#projects"
+              href="#project"
               className="
                 w-full
                 rounded-lg

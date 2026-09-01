@@ -5,7 +5,7 @@ import projectsData from "../data/projectsData";
 
 const Project = () => {
   return (
-    <section className="py-20 font-pop">
+    <section id="project" className="py-20 font-pop">
       <Container >
 
         {/* Section Heading */}

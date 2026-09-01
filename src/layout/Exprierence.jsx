@@ -85,16 +85,11 @@ const Exprierence = () => {
       <Container>
         {/* Heading */}
         <div className="mb-16 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-600">
-            MY JOURNEY
-          </p>
+        
 
-          <Heading text="Experience & Certifications" />
+          <Heading para="Explore my expertise in Digital Marketing, SEO, Social Media Marketing, and professional marketing tools." intro="MY JOURNEY" text="Experience & Certifications" />
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            My professional journey, training experience, mentoring activities,
-            and digital marketing certifications.
-          </p>
+        
         </div>
 
         {/* Experience Timeline */}

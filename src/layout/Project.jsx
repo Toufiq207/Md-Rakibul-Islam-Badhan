@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../component/Container";
 import projectsData from "../data/projectsData";
+import Heading from "../component/Heading";
 
 
 const Project = () => {
@@ -9,19 +10,9 @@ const Project = () => {
       <Container >
 
         {/* Section Heading */}
-        <div className="text-center mb-14">
-          <p className="text-sm font-medium uppercase tracking-[3px] text-blue-600 mb-3">
-            My Work
-          </p>
-
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-            Projects & Case Studies
-          </h2>
-
-          <p className="max-w-2xl mx-auto mt-5 text-gray-600 leading-7">
-            Here are some of my selected projects, showing the problem,
-            solution and approach behind each project.
-          </p>
+        <div  className="text-center mb-14">
+          <Heading intro='My Work' para='Here are some of my selected projects, showing the problem,
+            solution and approach behind each project.'  text='  Projects & Case Studies'/>
         </div>
 
         {/* Projects */}

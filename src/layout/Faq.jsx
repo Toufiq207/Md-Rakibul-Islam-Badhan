@@ -17,11 +17,10 @@ const Faq = () => {
 
     {/* Heading */}
     <div className="mb-10 text-center">
-      <Haeding text="FAQ" />
+      <Haeding para='Frequently Asked Questions' text="FAQ" />
 
-      <p className="mt-3 font-normal font-pop text-gray-600">
-        Frequently Asked Questions
-      </p>
+    
+    
     </div>
 
     {/* FAQ */}

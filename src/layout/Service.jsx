@@ -35,19 +35,18 @@ return ( <section className="py-16 font-pop" id="service"> <Container>
 
     {/* Heading */}
     <div className="mb-10 text-center">
-      <p className="mb-2 font-semibold text-blue-600">
-        WHAT I OFFER
-      </p>
+      
 
       <Heading
         className="text-center"
+        intro=" WHAT I OFFER"
         text="My Services"
+        para='Professional digital marketing solutions designed to improve
+        your online presence, generate leads, and grow your business.'
       />
 
-      <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-        Professional digital marketing solutions designed to improve
-        your online presence, generate leads, and grow your business.
-      </p>
+      
+      
     </div>
 
     {/* Cards */}
@@ -108,86 +107,86 @@ return ( <section className="py-16 font-pop" id="service"> <Container>
     {/* Modal */}
     {selectedService && (
       <div
-        className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 px-4 py-6 backdrop-blur-sm"
-        onClick={() => setSelectedService(null)}
-      >
+  className="fixed inset-x-0 bottom-0 top-4 w-screen md:top-16 z-[9999] flex items-center justify-center bg-black/70 px-3 py-3 backdrop-blur-sm sm:px-4 md:top-[70px]"
+  onClick={() => setSelectedService(null)}
+>
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.9,
+      y: 30,
+    }}
+    animate={{
+      opacity: 1,
+      scale: 1,
+      y: 0,
+    }}
+    transition={{
+      duration: 0.3,
+    }}
+    className="relative max-h-[calc(100vh-80px)] w-full max-w-md overflow-y-auto rounded-xl bg-white p-4 shadow-2xl sm:max-w-lg sm:p-6 md:max-w-2xl md:p-8"
+    onClick={(e) => e.stopPropagation()}
+  >
+    {/* Close Icon */}
+    <button
+      onClick={() => setSelectedService(null)}
+      className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-sm text-gray-600 transition-all duration-300 hover:bg-black hover:text-white sm:right-4 sm:top-4 sm:h-10 sm:w-10"
+    >
+      <FaTimes />
+    </button>
+
+    {/* Service Icon */}
+    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:mb-5 sm:h-16 sm:w-16">
+      {React.createElement(selectedService.icon, {
+        className: "text-xl sm:text-2xl",
+      })}
+    </div>
+
+    {/* Title */}
+    <h2 className="mb-3 pr-10 text-xl font-bold text-gray-900 sm:mb-4 sm:text-2xl md:text-3xl">
+      {selectedService.title}
+    </h2>
+
+    {/* Details */}
+    <p className="mb-4 text-sm leading-6 text-gray-600 sm:mb-6 sm:text-base sm:leading-7">
+      {selectedService.details}
+    </p>
+
+    {/* Features */}
+    <h3 className="mb-3 text-base font-bold text-gray-900 sm:mb-4 sm:text-lg">
+      What I Can Help With
+    </h3>
+
+    <div className="space-y-2 sm:space-y-3">
+      {selectedService.features.map((feature, index) => (
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-            y: 40,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-          }}
+          key={index}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.3,
+            delay: index * 0.08,
           }}
-          className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl sm:p-8"
-          onClick={(e) => e.stopPropagation()}
+          className="flex items-center gap-2 rounded-lg bg-gray-50 p-2.5 sm:gap-3 sm:p-3"
         >
-          {/* Close Icon */}
-          <button
-            onClick={() => setSelectedService(null)}
-            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all duration-300 hover:bg-black hover:text-white"
-          >
-            <FaTimes />
-          </button>
+          <FaCheckCircle className="shrink-0 text-sm text-gray-800 sm:text-base" />
 
-          {/* Service Icon */}
-          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-black text-white">
-            {React.createElement(selectedService.icon, {
-              className: "text-2xl",
-            })}
-          </div>
-
-          {/* Title */}
-          <h2 className="mb-4 pr-10 text-2xl font-bold text-gray-900 sm:text-3xl">
-            {selectedService.title}
-          </h2>
-
-          {/* Details */}
-          <p className="mb-6 text-sm leading-7 text-gray-600 sm:text-base">
-            {selectedService.details}
-          </p>
-
-          {/* Features */}
-          <h3 className="mb-4 text-lg font-bold text-gray-900">
-            What I Can Help With
-          </h3>
-
-          <div className="space-y-3">
-            {selectedService.features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.08,
-                }}
-                className="flex items-center gap-3 rounded-lg bg-gray-50 p-3"
-              >
-                <FaCheckCircle className="shrink-0 text-gray-800" />
-
-                <span className="text-sm text-gray-700">
-                  {feature}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Close */}
-          <button
-            onClick={() => setSelectedService(null)}
-            className="mt-7 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-gray-800"
-          >
-            Close
-          </button>
+          <span className="text-xs text-gray-700 sm:text-sm">
+            {feature}
+          </span>
         </motion.div>
-      </div>
+      ))}
+    </div>
+
+    {/* Close */}
+    <button
+      onClick={() => setSelectedService(null)}
+      className="mt-5 w-full rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-gray-800 sm:mt-7 sm:w-auto sm:px-6 sm:py-3"
+    >
+      Close
+    </button>
+  </motion.div>
+</div>
     )}
 
   </Container>

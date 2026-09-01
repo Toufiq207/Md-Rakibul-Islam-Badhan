@@ -10,16 +10,15 @@ const Skill = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold mb-2">
-            MY EXPERTISE
-          </p>
+          
+          
 
-          <Heading text="My Professional Skills" />
+          <Heading intro='MY EXPERTISE' para='Explore my expertise in Digital Marketing, SEO, Social Media Marketing, and professional marketing tools.
 
-          <p className="max-w-2xl mx-auto mt-4 text-gray-600">
-            Explore my expertise in Digital Marketing, SEO, Social Media
-            Marketing, and professional marketing tools.
-          </p>
+' text="My Professional Skills" />
+
+          
+          
         </div>
 
         {/* Skill Categories */}

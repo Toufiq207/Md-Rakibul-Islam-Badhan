@@ -1,25 +1,48 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "../component/Container";
 import projectsData from "../data/projectsData";
 import Heading from "../component/Heading";
 
-
 const Project = () => {
   return (
-    <section id="project" className="py-20 font-pop">
-      <Container >
-
+    <section id="project" className="py-20 font-pop overflow-hidden">
+      <Container>
         {/* Section Heading */}
-        <div  className="text-center mb-14">
-          <Heading intro='My Work' para='Here are some of my selected projects, showing the problem,
-            solution and approach behind each project.'  text='  Projects & Case Studies'/>
+        <div className="text-center mb-14">
+          <Heading
+            intro="My Work"
+            para="Here are some of my selected projects, showing the problem,
+            solution and approach behind each project."
+            text="Projects & Case Studies"
+          />
         </div>
 
         {/* Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project) => (
-            <div
+          {projectsData.map((project, index) => (
+            <motion.div
               key={project.id}
+              initial={{
+                opacity: 0,
+                y: 60,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -8,
+              }}
               className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-xl transition-all duration-300"
             >
               {/* Project Number */}
@@ -70,10 +93,9 @@ const Project = () => {
                   {project.result}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-
       </Container>
     </section>
   );

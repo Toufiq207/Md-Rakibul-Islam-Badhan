@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import Container from '../Component/Container'
 
@@ -42,7 +41,6 @@ const Navebar = () => {
   return (
     <nav className="fixed left-0 top-0 z-[9999] w-full border-b-2 border-black bg-gray-900">
 
-      {/* Navbar */}
       <Container className="mx-auto flex h-[65px] w-full max-w-full items-center justify-between px-4 sm:h-[75px] sm:px-6 lg:h-[90px]">
 
         {/* Logo */}
@@ -87,36 +85,29 @@ const Navebar = () => {
       </Container>
 
       {/* Mobile Menu */}
-      <div
-        className={`w-full overflow-hidden bg-gray-900 transition-all duration-300 lg:hidden ${
-          open
-            ? 'max-h-[600px] border-t border-gray-700 opacity-100'
-            : 'pointer-events-none max-h-0 opacity-0'
-        }`}
-      >
-        <ul className="w-full px-4 pb-4 pt-2 sm:px-6">
-
-          {menuItems.map((item) => (
-            <li
-              key={item.name}
-              className="border-b border-gray-700"
-            >
-              <a
-                href={item.link}
-                onClick={(e) => handleMenuClick(e, item.link)}
-                className="block w-full py-3 text-base font-medium text-white transition duration-300 hover:bg-gray-800 hover:pl-2 sm:py-4 sm:text-lg"
+      {open && (
+        <div className="w-full border-t border-gray-700 bg-gray-900 lg:hidden">
+          <ul className="w-full px-4 pb-4 pt-2 sm:px-6">
+            {menuItems.map((item) => (
+              <li
+                key={item.name}
+                className="border-b border-gray-700"
               >
-                {item.name}
-              </a>
-            </li>
-          ))}
-
-        </ul>
-      </div>
+                <a
+                  href={item.link}
+                  onClick={(e) => handleMenuClick(e, item.link)}
+                  className="block w-full py-3 text-base font-medium text-white hover:bg-gray-800 sm:py-4 sm:text-lg"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
     </nav>
   )
 }
 
 export default Navebar
-

@@ -1,7 +1,6 @@
+
 import React, { useState } from 'react'
 import Container from '../Component/Container'
-// import Image from '../Component/Image'
-// import Logo from '../assets/logo/logo.png'
 
 const Navebar = () => {
   const [open, setOpen] = useState(false)
@@ -25,7 +24,7 @@ const Navebar = () => {
 
     if (section) {
       const navbar = document.querySelector('nav')
-      const navbarHeight = navbar?.offsetHeight || 90
+      const navbarHeight = navbar?.offsetHeight || 70
 
       const targetPosition =
         section.getBoundingClientRect().top +
@@ -41,22 +40,31 @@ const Navebar = () => {
   }
 
   return (
-    <nav className='fixed left-0 top-0 z-[9999] w-full border-b-2 border-black bg-gray-900'>
+    <nav className="fixed left-0 top-0 z-[9999] w-full border-b-2 border-black bg-gray-900">
 
-      <Container className='relative flex h-[90px] items-center justify-between'>
+      {/* Navbar */}
+      <Container className="mx-auto flex h-[65px] w-full max-w-full items-center justify-between px-4 sm:h-[75px] sm:px-6 lg:h-[90px]">
 
         {/* Logo */}
-      
-<h1 className='text-white font-bold text-2xl'>RIB</h1>
+        <a
+          href="#home"
+          onClick={(e) => handleMenuClick(e, '#home')}
+          className="shrink-0"
+        >
+          <h1 className="text-xl font-bold text-white sm:text-2xl lg:text-3xl">
+            RIB
+          </h1>
+        </a>
+
         {/* Desktop Menu */}
-        <div className='hidden lg:block'>
-          <ul className='flex items-center gap-6 xl:gap-10'>
+        <div className="hidden lg:block">
+          <ul className="flex items-center gap-5 xl:gap-8">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.link}
                   onClick={(e) => handleMenuClick(e, item.link)}
-                  className='text-lg text-white transition hover:text-gray-300 xl:text-2xl'
+                  className="whitespace-nowrap text-lg font-medium text-white transition duration-300 hover:text-gray-300 xl:text-xl"
                 >
                   {item.name}
                 </a>
@@ -67,42 +75,48 @@ const Navebar = () => {
 
         {/* Mobile Button */}
         <button
-          type='button'
+          type="button"
           onClick={() => setOpen(!open)}
-          className='z-[10000] text-3xl text-white lg:hidden'
+          className="flex h-10 w-10 shrink-0 items-center justify-center text-3xl leading-none text-white lg:hidden"
+          aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? '✕' : '☰'}
         </button>
 
-        {/* Mobile Menu */}
-        {open && (
-          <div className='absolute left-0 top-[90px] z-[9998] w-full border-b-2 border-black bg-gray-900 px-5 py-4 shadow-xl lg:hidden'>
-
-            <ul className='flex flex-col'>
-
-              {menuItems.map((item) => (
-                <li
-                  key={item.name}
-                  className='border-b border-gray-600'
-                >
-                  <a
-                    href={item.link}
-                    onClick={(e) => handleMenuClick(e, item.link)}
-                    className='block py-3 text-lg font-medium text-white hover:bg-gray-800'
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-
-            </ul>
-
-          </div>
-        )}
-
       </Container>
+
+      {/* Mobile Menu */}
+      <div
+        className={`w-full overflow-hidden bg-gray-900 transition-all duration-300 lg:hidden ${
+          open
+            ? 'max-h-[600px] border-t border-gray-700 opacity-100'
+            : 'pointer-events-none max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="w-full px-4 pb-4 pt-2 sm:px-6">
+
+          {menuItems.map((item) => (
+            <li
+              key={item.name}
+              className="border-b border-gray-700"
+            >
+              <a
+                href={item.link}
+                onClick={(e) => handleMenuClick(e, item.link)}
+                className="block w-full py-3 text-base font-medium text-white transition duration-300 hover:bg-gray-800 hover:pl-2 sm:py-4 sm:text-lg"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+
+        </ul>
+      </div>
+
     </nav>
   )
 }
 
 export default Navebar
+

@@ -1,91 +1,119 @@
-import React, { useState } from 'react'
-import Container from '../component/Container'
-import { FaBars } from 'react-icons/fa'
-import { RxCross2 } from 'react-icons/rx'
+import React, { useState } from "react";
+import Container from "../component/Container";
+import { FaBars } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
 const Navber = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', link: '#home' },
-    { name: 'About', link: '#about' },
-    { name: 'Service', link: '#service' },
-    { name: 'Skills', link: '#skills' },
-    { name: 'FAQ', link: '#faq' },
-    { name: 'Experience', link: '#experience' },
-    { name: 'Project', link: '#project' },
-    { name: 'Contact', link: '#contact' },
-  ]
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Service", link: "#service" },
+    { name: "Skills", link: "#skills" },
+    { name: "FAQ", link: "#faq" },
+    { name: "Experience", link: "#experience" },
+    { name: "Project", link: "#project" },
+    { name: "Contact", link: "#contact" },
+  ];
 
   return (
-    <nav className='fixed inset-x-0 top-0 z-[9999] w-full bg-red-500'>
+    <nav className="fixed inset-x-0 top-0 z-[9999] w-full font-pop">
       
-      {/* Navbar */}
-      <Container className='flex h-[70px] w-full items-center justify-between px-4 sm:h-[80px]'>
+      {/* ================= DESKTOP NAVBAR ================= */}
+      <div className="hidden border-b border-white/10 bg-[#111827]/95 backdrop-blur-lg lg:block">
+        <Container className="flex h-[80px] items-center justify-between px-4">
+          
+          {/* Logo */}
+          <a href="#home" className="group">
+            <h1 className="text-4xl font-bold tracking-wider text-white">
+              RI<span className="text-red-500">B</span>
+            </h1>
 
-        {/* Logo */}
-        <a
-          href='#home'
-          className='shrink-0'
+            <div className="h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
+          </a>
+
+          {/* Desktop Menu */}
+          <ul className="flex items-center rounded-full border border-white/10 bg-white/5 p-2 shadow-lg backdrop-blur-md">
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.link}
+                  className="relative block rounded-full px-4 py-2 text-sm font-medium text-gray-300 transition-all duration-300 hover:bg-red-500 hover:text-white xl:px-5 xl:text-base"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+         
+
+        </Container>
+      </div>
+
+
+      {/* ================= MOBILE NAVBAR ================= */}
+      <div className="border-b border-white/10 bg-[#111827] lg:hidden ">
+        
+        {/* Mobile Top Bar */}
+        <div className="flex h-[70px] items-center justify-between px-4">
+          
+          {/* Mobile Logo */}
+          <a href="#home">
+            <h1 className="text-3xl font-bold text-white">
+              RI<span className="text-red-500">B</span>
+            </h1>
+          </a>
+
+          {/* Menu Button */}
+          <button
+            type="button"
+            onClick={() => setOpen(!open)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition duration-300 hover:bg-red-500"
+          >
+            {open ? <RxCross2 /> : <FaBars />}
+          </button>
+
+        </div>
+
+
+        {/* ================= MOBILE DROPDOWN ================= */}
+        <div
+          className={`overflow-hidden border-t border-white/10 transition-all duration-500 ease-in-out ${
+            open ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
-          <h1 className='font-pop text-3xl font-bold text-white sm:text-4xl'>
-            RIB
-          </h1>
-        </a>
+          <Container className="px-4 py-5">
+            
+            <ul className="grid grid-cols-2 gap-3">
+              {menuItems.map((item, index) => (
+                <li key={item.name}>
+                  <a
+                    href={item.link}
+                    onClick={() => setOpen(false)}
+                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-gray-200 transition-all duration-300 hover:border-red-500 hover:bg-red-500 hover:text-white"
+                  >
+                    <span>{item.name}</span>
 
-        {/* Desktop Menu */}
-        <ul className='hidden items-center gap-3 font-pop text-base text-white lg:flex xl:gap-6 xl:text-xl'>
-          {menuItems.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.link}
-                className='whitespace-nowrap transition hover:font-bold'
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+                    <span className="text-xs text-red-500 transition group-hover:text-white">
+                      0{index + 1}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-        {/* Mobile Menu Button */}
-        <button
-          type='button'
-          onClick={() => setOpen(!open)}
-          className='flex h-10 w-10 shrink-0 items-center justify-center text-2xl text-white lg:hidden'
-        >
-          {open ? <RxCross2 /> : <FaBars />}
-        </button>
 
-      </Container>
+          
 
-      {/* Mobile Menu */}
-      <div
-        className={`w-full overflow-hidden bg-red-500 transition-all duration-300 lg:hidden ${
-          open
-            ? 'max-h-[600px] border-t border-white'
-            : 'max-h-0'
-        }`}
-      >
-        <ul className='flex flex-col px-4 pb-4 pt-2'>
-          {menuItems.map((item) => (
-            <li
-              key={item.name}
-              className='border-b border-red-400 last:border-b-0'
-            >
-              <a
-                href={item.link}
-                onClick={() => setOpen(false)}
-                className='block py-3 font-pop text-lg font-medium text-white'
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+          </Container>
+        </div>
+
       </div>
 
     </nav>
-  )
-}
+  );
+};
 
-export default Navber
+export default Navber;

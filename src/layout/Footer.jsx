@@ -1,15 +1,14 @@
-
 import React from "react";
 import {
   FaFacebookF,
-  FaGithub,
   FaLinkedinIn,
   FaTwitter,
   FaArrowUp,
   FaHeart,
 } from "react-icons/fa";
 import Container from "../component/Container";
-import serviceData from '../data/serviceData'
+import serviceData from "../data/serviceData";
+
 const Footer = () => {
   const quickLinks = [
     { name: "Home", link: "#home" },
@@ -20,11 +19,7 @@ const Footer = () => {
     { name: "Contact", link: "#contact" },
   ];
 
-
-  
-
   const socialLinks = [
-    
     {
       icon: <FaLinkedinIn />,
       link: "https://www.linkedin.com/",
@@ -57,26 +52,28 @@ const Footer = () => {
 
       <Container>
         {/* Main Footer */}
-        <div className="relative grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid grid-cols-1 gap-12 py-14 text-center sm:grid-cols-2 md:py-16 md:text-left lg:grid-cols-4">
 
           {/* Brand */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
+
             {/* Logo */}
-      <a href="#home" className="group">
-        <h1 className="text-4xl font-bold tracking-wider text-white">
-          RI<span className="text-red-500">B</span>
-        </h1>
+            <a href="#home" className="group inline-block">
+              <h1 className="text-4xl font-bold tracking-wider text-white">
+                RI<span className="text-red-500">B</span>
+              </h1>
+            </a>
 
-        <div className="h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-      </a>
-
+            {/* Description */}
             <p className="mt-5 max-w-sm text-sm leading-7 text-gray-400">
-             
-Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digital presence into revenue-generating engines through targeted digital marketing, strategic SEO, and high-converting ad campaigns.
+              Welcome! I’m Md Rakibul Islam Badhan. I help businesses
+              transform their digital presence into revenue-generating
+              engines through targeted digital marketing, strategic SEO,
+              and high-converting ad campaigns.
             </p>
 
             {/* Social Icons */}
-            <div className="mt-7 flex gap-3">
+            <div className="mt-7 flex justify-center gap-3 md:justify-start">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -93,7 +90,7 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="mb-6 text-lg font-semibold">
               Quick Links
             </h3>
@@ -103,7 +100,7 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="group flex items-center gap-2 text-sm text-gray-400 transition-all duration-300 hover:translate-x-1 hover:text-purple-400"
+                    className="group flex items-center justify-center gap-2 text-sm text-gray-400 transition-all duration-300 hover:translate-x-1 hover:text-purple-400 md:justify-start"
                   >
                     <span className="h-[1px] w-0 bg-purple-500 transition-all duration-300 group-hover:w-4" />
                     {item.name}
@@ -114,7 +111,7 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
           </div>
 
           {/* Services */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="mb-6 text-lg font-semibold">
               Services
             </h3>
@@ -132,13 +129,14 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
           </div>
 
           {/* CTA */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="mb-6 text-lg font-semibold">
               Let's Work Together
             </h3>
 
-            <p className="mb-6 text-sm leading-6 text-gray-400">
-              Have a project in mind? Let's build something amazing together.
+            <p className="mb-6 max-w-xs text-sm leading-6 text-gray-400">
+              Have a project in mind? Let's build something amazing
+              together.
             </p>
 
             <a
@@ -155,12 +153,15 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
         <div className="h-px bg-white/10" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col items-center justify-between gap-5 py-7 text-sm text-gray-500 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-5 py-7 text-center text-sm text-gray-500 md:flex-row md:text-left">
 
-          <p className="text-center md:text-left">
-            © {new Date().getFullYear()} Rakibul Islam Badhan. All rights reserved.
+          {/* Copyright */}
+          <p>
+            © {new Date().getFullYear()} Rakibul Islam Badhan.
+            <span className="hidden sm:inline"> All rights reserved.</span>
           </p>
 
+          {/* Made With */}
           <p className="flex items-center gap-1">
             Made with
             <FaHeart className="text-red-500" />
@@ -182,4 +183,3 @@ Welcome! I’m Md Rakibul Islam Badhan. I help businesses transform their digita
 };
 
 export default Footer;
-

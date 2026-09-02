@@ -1,7 +1,7 @@
 
 import BannerOne from '../assets/banner/bannerone.Webp'
 import BannerTwo from '../assets/banner/bannertwo.Webp'
-import BannerThree from '../assets/banner/banner three.Webp'
+import BannerThree from '../assets/banner/bannerthree.Webp'
 import BannerFour from '../assets/banner/bannerfour.Webp'
 import BannerFive from '../assets/banner/bannerfive.Webp'
 const bannerData=[

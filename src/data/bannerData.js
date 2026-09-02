@@ -1,7 +1,7 @@
 
 import BannerOne from '../assets/banner/bannerone.png'
 import BannerTwo from '../assets/banner/bannertwo.png'
-import BannerThree from '../assets/banner/bannerthree.png'
+import BannerThree from '../assets/banner/banner three.png'
 import BannerFour from '../assets/banner/bannerfour.png'
 import BannerFive from '../assets/banner/bannerfive.png'
 const bannerData=[

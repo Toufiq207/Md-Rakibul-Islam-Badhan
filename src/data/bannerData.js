@@ -1,9 +1,9 @@
 
-import BannerOne from '../assets/banner/bannerone.png'
-import BannerTwo from '../assets/banner/bannertwo.png'
-import BannerThree from '../assets/banner/banner three.png'
-import BannerFour from '../assets/banner/bannerfour.png'
-import BannerFive from '../assets/banner/bannerfive.png'
+import BannerOne from '../assets/banner/bannerone.Webp'
+import BannerTwo from '../assets/banner/bannertwo.Webp'
+import BannerThree from '../assets/banner/banner three.Webp'
+import BannerFour from '../assets/banner/bannerfour.Webp'
+import BannerFive from '../assets/banner/bannerfive.Webp'
 const bannerData=[
   {
     id:1,

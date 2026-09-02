@@ -49,7 +49,8 @@ const About = () => {
           targeted digital marketing, strategic SEO, and high-converting ad
           campaigns.
 
-
+           <br />
+           <br />
 
           Holding NSDA Level-3, Level-4, and Level-6 certifications in
           Digital Marketing, I combine analytical thinking with creative

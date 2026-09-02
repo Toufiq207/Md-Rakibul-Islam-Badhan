@@ -4,9 +4,9 @@ import Container from "./Container";
 import Image from "./Image";
 import bannerData from "../data/bannerData";
 
-import Facebook from "../assets/icon/facebook.png";
-import Linkdin from "../assets/icon/linkedin.jpg";
-import Instagram from "../assets/icon/instagram.png";
+import Facebook from "../assets/icon/facebook.webp";
+import Linkdin from "../assets/icon/linkedin.webp";
+import Instagram from "../assets/icon/instagram.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 

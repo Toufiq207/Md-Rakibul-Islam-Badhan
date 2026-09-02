@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../component/Container";
 import Heading from "../component/Heading";
 import Image from "../component/Image";
-import Badhon from "../assets/logo/rakibilislam badhon.png";
+import Badhon from "../assets/logo/rakibilislam badhon.webp";
 import { motion } from "framer-motion";
 const About = () => {
   return (
